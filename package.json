@@ -1,0 +1,23 @@
+{
+  "name": "bingo",
+  "version": "1.0.0",
+  "description": "Bingo project with multiple services",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run dev --prefix bigserver\" \"npm run dev --prefix bingo\\ front\" \"npm run dev --prefix db_magager\" \"npm run dev --prefix stage1\" \"npm run dev --prefix stage2\" \"npm run dev --prefix stage3\" \"npm run dev --prefix stage4\"",
+    "install-all": "npm install && npm run install-bigserver && npm run install-bingo-front && npm run install-db-manager && npm run install-stage1 && npm run install-stage2 && npm run install-stage3 && npm run install-stage4",
+    "install-bigserver": "cd bigserver && npm install",
+    "install-bingo-front": "cd bingo\\ front && npm install",
+    "install-db-manager": "cd db_magager && npm install",
+    "install-stage1": "cd stage1 && npm install",
+    "install-stage2": "cd stage2 && npm install",
+    "install-stage3": "cd stage3 && npm install",
+    "install-stage4": "cd stage4 && npm install"
+  },
+  "devDependencies": {
+    "concurrently": "^7.6.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
